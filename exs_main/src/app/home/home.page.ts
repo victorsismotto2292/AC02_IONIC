@@ -42,6 +42,21 @@ export class HomePage {
       const valor_superior = this.inicial_superior + parseFloat(this.km_rodado)*3.5;
       const valor_app = valor_superior*0.25;
       const valor_moto = valor_superior*0.75;
+
+      this.res_ex1 = 
+      
+      `Valor final: ${valor_superior}` + ' |' + ` Valor do motorista: ${valor_moto}` + ' |'
+      + ` Valor do aplicativo: ${valor_app}`;
+    }
+    else if(this.tipoCobranca == 'VIP'){
+      const valor_vip = this.inicial_vip + parseFloat(this.km_rodado)*5.5;
+      const valor_app = valor_vip*0.25;
+      const valor_moto = valor_vip*0.75;
+
+      this.res_ex1 = 
+      
+      `Valor final: ${valor_vip}` + ' |' + ` Valor do motorista: ${valor_moto}` + ' |'
+      + ` Valor do aplicativo: ${valor_app}`;
     }
   }
 }

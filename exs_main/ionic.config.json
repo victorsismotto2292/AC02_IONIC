@@ -1,7 +1,5 @@
 {
   "name": "exs_main",
-  "integrations": {
-    "capacitor": {}
-  },
+  "integrations": {},
   "type": "angular"
 }

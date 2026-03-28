@@ -64,5 +64,35 @@ export class HomePage {
 
   // EXERCÍCIO 2:
 
-  
+  res_ex2: string = '';
+  quilometragem: string = '';
+  tipoCombustivel: string = '';
+  precoLitro: any = '';
+
+  Consumo(){
+    const km = parseFloat(this.quilometragem);
+    const preco = parseFloat(this.precoLitro);
+
+    if(isNaN(km) || this.tipoCombustivel == '' || isNaN(preco)){
+      this.res_ex2 = 'Por favor, preencha os campos fornecidos.';
+      return;
+    }
+
+    let consumo = 0;
+
+    if(this.tipoCombustivel == 'etanol'){
+      consumo = 9;
+    }
+    else if(this.tipoCombustivel == 'gasolina'){
+      consumo = 12;
+    }
+    else if(this.tipoCombustivel == 'diesel'){
+      consumo = 15;
+    }
+
+    const litros = km / consumo;
+    const valorC = litros * preco;
+
+    this.res_ex2 = `Valor do combustível: ${valorC.toFixed(2)}`;
+  }
 }

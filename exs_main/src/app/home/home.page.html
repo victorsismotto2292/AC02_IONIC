@@ -32,4 +32,28 @@
   </div>
 
   <ion-item-divider color="medium"></ion-item-divider>
+
+  <div class="alert_ex2">
+    <ion-alert
+        trigger="ver-consumo"
+        header="Resultado:"
+        message="{{res_ex2}}"
+        [buttons]="alertButtons"
+      >
+    </ion-alert>    
+  </div>
+
+  <div style="padding: 10px">
+    <h1 style="text-align: center; font-size: 1.5rem;">Exercício 2</h1>
+    <ion-input type="number" label="Digite a quilometragem rodada" labelPlacement="floating" placeholder="Apenas números" [(ngModel)]="quilometragem"></ion-input>
+    <ion-input type="number" label="Digite o preço por litro do combustível" labelPlacement="floating" placeholder="Apenas números" [(ngModel)]="precoLitro"></ion-input>
+    <ion-radio-group [(ngModel)]="tipoCombustivel">
+      <p>Selecione o tipo de Combustível</p>
+      <ion-radio value="etanol">Etanol</ion-radio><br />
+      <ion-radio value="gasolina">Gasolina</ion-radio><br />
+      <ion-radio value="diesel">Diesel</ion-radio><br /><br>
+    </ion-radio-group>
+
+    <ion-button expand="block" id="ver-consumo" (click)="Consumo()" style="width: 300px">Calcular</ion-button>
+  </div>
 </ion-content>

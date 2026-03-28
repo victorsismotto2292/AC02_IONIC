@@ -20,7 +20,7 @@
 
   <div style="padding: 10px">
     <h1 style="text-align: center; font-size: 1.5rem;">Exercício 1</h1>
-    <ion-input label="Digite os km rodados" labelPlacement="floating" placeholder="Apenas números" [(ngModel)]="km_rodado"></ion-input>
+    <ion-input type="number" label="Digite os km rodados" labelPlacement="floating" placeholder="Apenas números" [(ngModel)]="km_rodado"></ion-input>
     <ion-radio-group [(ngModel)]="tipoCobranca">
       <p>Selecione a modalidade do Carro</p>
       <ion-radio value="normal">Normal</ion-radio><br />
